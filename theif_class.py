@@ -1,3 +1,4 @@
+# training
 from random import randint
 
 
