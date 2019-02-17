@@ -1,13 +1,14 @@
 import random
 
 
-class Thief:
-    sneaky = True
-
-    def __init__(self, name, **kwargs):
-        self.name = name
+class Character:
+    def __init__(self, **kwargs):
         for key, value in kwargs.items():
             setattr(self, key, value)
+
+
+class Thief(Character):
+    sneaky = True
 
     def pick_pocket(self):
             return bool(random.randint(0, 1)) and self.sneaky
@@ -16,5 +17,6 @@ class Thief:
         return self.sneaky and light_level == 10
 
 
-ali = Thief("ali", weapn="knife", car="206")
+ali = Thief(weapn="knife", car="Peugeot 206")
 ali.hide(10)
+print(ali.car)
