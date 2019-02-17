@@ -16,5 +16,5 @@ class Thief:
         return self.sneaky and light_level == 10
 
 
-ali = Thief("ali", weapn="dog")
+ali = Thief("ali", weapn="knife", car="206")
 ali.hide(10)
