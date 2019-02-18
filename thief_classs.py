@@ -44,3 +44,7 @@ print(ali.car)
 print(ali.sneaky)
 print(ali.hide(4))
 print(ali.agile)
+print(issubclass(Thief, Character))
+print(type(ali))
+
+
