@@ -46,5 +46,6 @@ print(ali.hide(4))
 print(ali.agile)
 print(issubclass(Thief, Character))
 print(type(ali))
+print(ali.__class__.__name__)
 
 
