@@ -21,6 +21,15 @@ class NumberString:
     def __radd__(self, other):
         return self + other
 
+    def __mul__(self, other):
+        if '.' in self.value:
+            return float(self) * other
+        else:
+            return int(self) * other
+
+    def __rmul__(self, other):
+        return self * other
+
 
 five = NumberString(5)
 print(five)
@@ -29,3 +38,6 @@ print(float(five))
 print(str(five))
 print(five + 2)
 print(2.2 + five)
+print(five * 2)
+print(10 * five)
+
