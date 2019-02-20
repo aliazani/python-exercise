@@ -33,9 +33,11 @@ class Thief(Character, Agile, Sneaky):
     sneaky = True
 
     def __init__(self, name, **kwargs):
-
         self.name = name
         super().__init__(**kwargs)
+
+    def __str__(self):
+        return f"{self.__class__.__name__}:{self.name}"
 
 
 ali = Thief("ali", weapn="knife", car="Peugeot 206")
@@ -46,4 +48,4 @@ print(ali.hide(4))
 print(ali.agile)
 print(issubclass(Thief, Character))
 print(type(ali))
-print(ali.__class__.__name__)
+print(ali)
