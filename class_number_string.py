@@ -36,16 +36,17 @@ class NumberString:
         else:
             return int(self) - other
 
-    # def __rsub__(self, other):
-    #     return other - self
+    def __rsub__(self, other):
+        return other - float(self)
+
     def __truediv__(self, other):
         if '.' in self.value:
             return float(self) / other
         else:
             return int(self) / other
 
-    # def __rtruediv__(self, other):
-    #     return other / self
+    def __rtruediv__(self, other):
+        return other / float(self)
 
 
 five = NumberString(5)
@@ -58,7 +59,7 @@ print(2.2 + five)
 print(five * 2)
 print(10 * five)
 print(five - 2)
-# print(10 - five)
+print(20 - five)
 print(five / 2)
-# print(2 / five)
+print(10 / five)
 
