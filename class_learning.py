@@ -7,3 +7,4 @@ print(isinstance(False, int))
 print(issubclass(int, float))
 print(issubclass(bool, int))
 
+
