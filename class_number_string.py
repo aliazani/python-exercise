@@ -30,6 +30,14 @@ class NumberString:
     def __rmul__(self, other):
         return self * other
 
+    def __sub__(self, other):
+        if '.' in self.value:
+            return float(self) - other
+        else:
+            return int(self) - other
+
+    # def __rsub__(self, other):
+    #     return other - self
 
 five = NumberString(5)
 print(five)
@@ -40,4 +48,6 @@ print(five + 2)
 print(2.2 + five)
 print(five * 2)
 print(10 * five)
+print(five - 2)
+# print(10 - five)
 
