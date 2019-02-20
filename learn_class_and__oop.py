@@ -32,12 +32,11 @@ class Inventory:
         #     yield item
 
 
-coin = Item('coin', 'Gold coin')
 inv = Inventory()
-inv.add(coin)
-print(coin in inv)
+coin = Item('coin', 'Gold coin')
 weapon = Weapon('sword', 'sharp', 40)
 weapon2 = Weapon('shotgun', 'shooter', 80)
+inv.add(coin)
 inv.add(weapon)
 inv.add(weapon2)
 print(inv.__len__())
