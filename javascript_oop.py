@@ -7,7 +7,7 @@ class JavaScriptObject(dict):
 
 
 d1 = JavaScriptObject({"Name": "ali"})
-
-print(d1)
 d1.language = 'python'
+print(d1)
 print(d1.language)
+print(d1.Name)
