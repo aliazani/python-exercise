@@ -1,3 +1,4 @@
+# class method or static method
 class Book:
     def __init__(self, title, author):
         self.title = title
