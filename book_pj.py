@@ -23,3 +23,4 @@ b = BookCase.create_books_case([('machine', 'mh.ahmad'), ('string', 'mohammad')]
 print(b)
 print(b.books)
 print(str(b.books[0]))
+print(str(b.books[1]))
