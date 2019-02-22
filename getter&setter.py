@@ -8,7 +8,7 @@ class Circle:
 
     @radius.setter
     def radius(self, radius):
-        self.diameter = radius *2
+        self.diameter = radius * 2
 
 
 small_one = Circle(10)
