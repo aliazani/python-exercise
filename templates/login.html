@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test login</title>
+</head>
+<body>
+    <h1>Welcome {{ name }}</h1>
+    <h1>{{ rep }}</h1>
+
+    {%  for i in range(rep) %}
+        <h3 style="color:rgb({{ i * 30 }}, 0, 0)"> hello {{ i }} </h3>
+    {% endfor %}
+
+    <a href="{{ path }}">link</a>
+</body>
+</html>
