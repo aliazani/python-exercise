@@ -1,5 +1,6 @@
 import sqlite3
 
+
 def add_user(conn, username, age):
     # username = "ali', 21); DELETE FROM company ; INSERT INTO Person (name, age) VALUES ('Ali"
     # "INSERT INTO Person (name, age) VALUES ('ali', 21); " \
@@ -10,7 +11,6 @@ def add_user(conn, username, age):
     conn.commit()
 
 
-
 conn = sqlite3.connect("new_table.sqlite")
 
 conn.execute('''
@@ -18,7 +18,6 @@ conn.execute('''
      (ID INTEGER PRIMARY KEY  AUTOINCREMENT,
      NAME           TEXT    NOT NULL,
      AGE            INT     NOT NULL);''')
-
 
 add_user(conn, "Jack", 21)
 add_user(conn, "John", 41)

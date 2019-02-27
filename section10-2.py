@@ -35,7 +35,6 @@ class Browser:
                 out.append(v)
         return out
 
-
     @property
     def text(self):
         if self._text == '':
