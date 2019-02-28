@@ -19,4 +19,7 @@ def table_show(m, n):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=8080)
+
+
+# link to connect http://127.0.0.1:8080/login/ali/3
