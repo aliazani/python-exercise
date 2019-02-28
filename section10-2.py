@@ -20,15 +20,16 @@ class Browser:
         pat = r'href=[\'"]?(https?[^\'" >]+)'
         links = re.findall(pat, self.text)
         browsers = []
-        for u in links:
+        for i in links:
             try:
-                browsers.append(Browser(u))
+                browsers.append(Browser(i))
             except:
                 pass
         return browsers
 
     @classmethod
     def get_unread(cls):
+
         out = []
         for v in cls.instances.values():
             if v._text == '':
