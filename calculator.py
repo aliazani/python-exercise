@@ -16,3 +16,5 @@ elif operate == "%":
 print(result)
 
 quit(input())
+
+
