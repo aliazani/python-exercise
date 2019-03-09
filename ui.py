@@ -6,6 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 import sys
+import math
 
 from PyQt5.QtWidgets import QDialog, QApplication
 from PyQt5 import QtCore, QtGui, QtWidgets
