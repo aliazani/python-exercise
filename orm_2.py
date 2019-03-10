@@ -8,7 +8,7 @@ Base = declarative_base()
 
 
 class User(Base):
-    __tablename__ = 'people'
+    __tablename__ = 'some'
     idi = Column(INTEGER, primary_key=True)
     name = Column(String)
     f_name = Column(String)
