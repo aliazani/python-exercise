@@ -16,7 +16,7 @@ def find_mismatch(s1, s2):
         return 2
 
 
-s1 = input("")
-s2 = input("")
-res = find_mismatch(s1, s2)
+inp1 = input("")
+inp2 = input("")
+res = find_mismatch(inp1, inp2)
 print(res)
