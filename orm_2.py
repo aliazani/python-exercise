@@ -26,9 +26,13 @@ class User(Base):
         return f"<User('{self.name}', '{self.last_name}', '{self.password}')>"
 
 
+# CRUD : Create
 # Base.metadata.create_all(engine)
-add_user = User("ali", "azani", "Aliazani1378")
-print(add_user.idi)
-print(add_user.name)
-session.add(add_user)
-session.commit()
+# add_user = User("ali", "azani", "Aliazani1378")
+# print(add_user.idi)
+# print(add_user.name)
+# session.add(add_user)
+# session.commit()
+# CRUD : Read
+my_user = session.query(User).filter_by(name="ali").first()
+print(my_user)
