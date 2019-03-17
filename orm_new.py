@@ -33,8 +33,20 @@ class User(Base):
 # print(add_user.name)
 # session.add(add_user)
 # session.commit()
+# ---> create multi user:
+session.add_all([
+    User("ali", "rezai", "pass"),
+    User("ahmad", "ahmdi", "pass2")
+])
+session.commit()
+# my_user = session.query(User).filter_by(name="ahmad").first()
+# print(my_user)
+# my_user.password = "pass2 new"
+# print(my_user)
+
+# print(session.new)
 # CRUD : Read
-my_user = session.query(User).filter_by(name="ali").first()
-print(my_user)
-print(my_user.name)
-print(my_user.password)
+# my_user = session.query(User).filter_by(name="ali").first()
+# print(my_user)
+# print(my_user.name)
+# print(my_user.password)
