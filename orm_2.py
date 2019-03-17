@@ -28,7 +28,7 @@ class User(Base):
 
 # CRUD : Create
 # Base.metadata.create_all(engine)
-# add_user = User("ali", "azani", "1234")
+# add_user = User("ali", "azn", "sdasdnacj nasjcnsacfuisahc  saduhisad")
 # print(add_user.idi)
 # print(add_user.name)
 # session.add(add_user)
