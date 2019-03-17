@@ -28,7 +28,7 @@ class User(Base):
 
 # CRUD : Create
 # Base.metadata.create_all(engine)
-# add_user = User("ali", "azani", "Aliazani1378")
+# add_user = User("ali", "azani", "1234")
 # print(add_user.idi)
 # print(add_user.name)
 # session.add(add_user)
@@ -36,3 +36,5 @@ class User(Base):
 # CRUD : Read
 my_user = session.query(User).filter_by(name="ali").first()
 print(my_user)
+print(my_user.name)
+print(my_user.password)
