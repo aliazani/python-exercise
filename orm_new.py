@@ -83,6 +83,20 @@ class User(Base):
 # for row in session.query(user_alias, user_alias.name).all():
 #     print(row.user_alias)
 
+# order
 # for row in session.query(User).order_by(User.idi)[1:3]:
 #     print(row)
 
+# filter
+# for n in session.query(User.name).filter_by(name="ahmad").first():
+#     print(n)
+
+# for n in session.query(User.name).filter_by(name="ahmad").all():
+#     print(n)
+
+# for n in session.query(User).filter(User.last_name == 'azn'):
+#     print(n)
+
+# and
+# for n in session.query(User).filter(User.name == 'ali').filter(User.last_name == 'azn'):
+#     print(n)
