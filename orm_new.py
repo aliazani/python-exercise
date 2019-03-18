@@ -69,5 +69,12 @@ class User(Base):
 # print(fake_user in session)
 
 # query
-for instance in session.query(User).order_by(User.idi):
-    print(instance)
+# for instance in session.query(User).order_by(User.idi):
+#     print(instance)
+
+# for name, full_name in session.query(User.name, User.last_name):
+#     print(name, full_name)
+
+# for row in session.query(User.name.label('Name')).all():
+#     print(row.Name)
+
