@@ -59,10 +59,15 @@ class User(Base):
 # persistent
 # detach
 
-fake_user = User("fake", "invalid", "12345")
-session.add(fake_user)
-print(fake_user in session)
-session.rollback()
-print(fake_user in session)
+
 # rollback
 
+# fake_user = User("fake", "invalid", "12345")
+# session.add(fake_user)
+# print(fake_user in session)
+# session.rollback()
+# print(fake_user in session)
+
+# query
+for instance in session.query(User).order_by(User.idi):
+    print(instance)
