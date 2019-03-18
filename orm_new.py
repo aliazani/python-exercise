@@ -25,6 +25,7 @@ class User(Base):
     def __repr__(self):
         return f"<User('{self.name}', '{self.last_name}', '{self.password}')>"
 
+
 # CRUD : Create
 # Base.metadata.create_all(engine)
 # add_user = User("ali", "azn", "sdasdnac")
@@ -49,3 +50,19 @@ class User(Base):
 # print(my_user)
 # print(my_user.name)
 # print(my_user.password)
+# all_users = session.query(User).all()
+# for user in all_users:
+#     print(user.name)
+# state session
+# transient
+# pending
+# persistent
+# detach
+
+fake_user = User("fake", "invalid", "12345")
+session.add(fake_user)
+print(fake_user in session)
+session.rollback()
+print(fake_user in session)
+# rollback
+
