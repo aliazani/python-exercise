@@ -79,6 +79,10 @@ class User(Base):
 #     print(row.Name)
 
 # alias
-user_alias = aliased(User, name="user_alias")
-for row in session.query(user_alias, user_alias.name).all():
-    print(row.user_alias)
+# user_alias = aliased(User, name="user_alias")
+# for row in session.query(user_alias, user_alias.name).all():
+#     print(row.user_alias)
+
+# for row in session.query(User).order_by(User.idi)[1:3]:
+#     print(row)
+
