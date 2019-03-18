@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, INTEGER
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, aliased
 
 db_conn = 'sqlite:///F:\\People.db'
 engine = create_engine(db_conn, echo=True)
@@ -78,3 +78,7 @@ class User(Base):
 # for row in session.query(User.name.label('Name')).all():
 #     print(row.Name)
 
+# alias
+user_alias = aliased(User, name="user_alias")
+for row in session.query(user_alias, user_alias.name).all():
+    print(row.user_alias)
