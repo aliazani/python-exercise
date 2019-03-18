@@ -25,7 +25,6 @@ class User(Base):
     def __repr__(self):
         return f"<User('{self.name}', '{self.last_name}', '{self.password}')>"
 
-
 # CRUD : Create
 # Base.metadata.create_all(engine)
 # add_user = User("ali", "azn", "sdasdnac")
@@ -34,11 +33,11 @@ class User(Base):
 # session.add(add_user)
 # session.commit()
 # ---> create multi user:
-session.add_all([
-    User("ali", "rezai", "pass"),
-    User("ahmad", "ahmdi", "pass2")
-])
-session.commit()
+# session.add_all([
+#     User("ali", "rezai", "pass"),
+#     User("ahmad", "ahmdi", "pass2")K
+# ])
+# session.commit()
 # my_user = session.query(User).filter_by(name="ahmad").first()
 # print(my_user)
 # my_user.password = "pass2 new"
