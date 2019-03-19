@@ -2,6 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, INTEGER
 from sqlalchemy.orm import sessionmaker, aliased
+from sqlalchemy import and_, or_
 
 db_conn = 'sqlite:///F:\\People.db'
 engine = create_engine(db_conn, echo=True)
@@ -99,4 +100,28 @@ class User(Base):
 
 # and
 # for n in session.query(User).filter(User.name == 'ali').filter(User.last_name == 'azn'):
+#     print(n)
+#
+# for n in session.query(User).filter(User.last_name !='azn'):
+#     print(n)
+
+# for i in session.query(User).filter(User.password.like('%pass%')):
+#     print(i)
+
+# for n in session.query(User).filter(User.name.in_(['ali', 'majid'])):
+#     print(n)
+
+# for n in session.query(User).filter(~User.name.in_(['ali', 'majid'])):
+#     print(n)
+
+# for n in session.query(User).filter(User.last_name == None):
+#     print(n)
+#
+# for n in session.query(User).filter(User.last_name != None):
+#     print(n)
+
+# for n in session.query(User).filter(and_(User.last_name != None, User.password == 'pass')):
+#     print(n)
+#
+# for n in session.query(User).filter(or_(User.last_name != None, User.password == 'pass')):
 #     print(n)
