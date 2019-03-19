@@ -26,7 +26,6 @@ class User(Base):
     def __repr__(self):
         return f"<User('{self.name}', '{self.last_name}', '{self.password}')>"
 
-
 # CRUD : Create
 # Base.metadata.create_all(engine)
 # add_user = User("ali", "azn", "sdasdnac")
@@ -125,3 +124,9 @@ class User(Base):
 #
 # for n in session.query(User).filter(or_(User.last_name != None, User.password == 'pass')):
 #     print(n)
+
+# another kind of query
+# # from_statement
+# for user in session.query(User).from_statement(r"SELECT * From People Where name=:name").params(name='ahmad').all():
+#     print(user)
+#
