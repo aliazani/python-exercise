@@ -130,3 +130,4 @@ class User(Base):
 # for user in session.query(User).from_statement(r"SELECT * From People Where name=:name").params(name='ahmad').all():
 #     print(user)
 #
+
